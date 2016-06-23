@@ -1,0 +1,289 @@
+angular.module('app.controllers', [])
+
+.controller('latestICDLNewsCtrl', function($scope) {
+
+	$scope.articles = [];
+
+	$scope.articles[0] = {
+		title: "ICDL AFRICA SIGNS MOU WITH KENYA SCHOOL OF GOVERNMENT",
+
+		img: "img/40o8KmXJR7qPs7beuqFt_ksg_mou_oct2015.jpg",
+
+		pub_date: "1 January 1970",
+
+		body: "The ICDL Africa team visited Mombasa at the end of October, as part of the trip to Kenya for the ATC Forum. ICDL Foundation CEO Damien O’Sullivan, ICDL Country Manager – Kenya, Etinick Mutinda and ICDL 					Africa Partner Relations Manager, Marie-Claire Walsh were hosted by the Kenya School of Government (KSG), at their Mombasa campus. The meeting was chaired by KSG Director General, Dr. Ludeki Chweya and concluded with the signing of a much anticipated Memorandum of Understanding between ICDL Africa and KSG. The MoU outlines the plan to certify Kenyan public sector staff with ICDL, to match KSG’s need for a high standard of digital skills in the workplace. Increasing the digital literacy levels of the Kenyan public sector will enable services to be delivered more effectively to the wider public. Both ICDL Africa and KSG are committed to creating a ICDL profile that will enhance the competencies of all staff, as Kenya leads     the way as an ICT driven economy in Africa.",
+
+	    source: "www.icdlafrica.org",
+
+	}
+
+	$scope.articles[1] = {
+		title: "Hello World",
+		img: "http://icdlafrica.org/build/img/logo-africa.png",
+		pub_date: "1 january 1970",
+		body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia voluptatem aliquam ab itaque laboriosam impedit, sapiente, ratione fugiat nostrum numquam tempore, accusantium sit provident nobis assumenda necessitatibus? Deserunt, reprehenderit.",
+		source: "www.loremipsum.com"
+	}
+
+	$scope.articles[2] = {
+		title: "All your base are belong to us!",
+		img: "http://icdlafrica.org/build/img/logo-africa.png",
+		pub_date: "1 january 1970",
+		body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia voluptatem aliquam ab itaque laboriosam impedit, sapiente, ratione fugiat nostrum numquam tempore, accusantium sit provident nobis assumenda necessitatibus? Deserunt, reprehenderit.",
+		source: "www.loremipsum.com"
+	}
+
+})
+
+.controller('iCDLModulesCtrl', function($scope) {
+
+})
+
+.controller('trainingExamsCtrl', function($scope) {
+
+	$scope.steps = [];
+	$scope.steps[0] = {
+		number: "Step One",
+		title: "Find a nearby accredited test center",
+		body: "For information on modules available, training, testing, and pricing please contact your local ICDL Accredited Test Centre."
+	}
+
+	$scope.steps[1] = {
+		number: "Step Two",
+		title: "Register & create your ICDL Profile",
+		body: "Purchase your unique candidate registration number. You can use this number to continue your ICDL education anywhere in the world. Choose from our list of modules or certifiy your skills with one of our recommended profiles: Base, Standard or Expert."
+	}
+
+	$scope.steps[2] = {
+		number: "Step Three",
+		title: "Undertake training",
+		body: "There are a range of training options available through your local ICDL Accredited Test Centre."
+	}
+
+	$scope.steps[3] = {
+		number: "Step Four",
+		title: "Get ICDL certified",
+		body: "Take the certification tests at an ICDL Accredited Test Centre. You decide which modules will appear on your ICDL certificate."
+	}
+
+	$scope.steps[4] = {
+		number: "Step Five",
+		title: "Refresh",
+		body: "Have you recently received a promotion or undertaken a career change? Keep up to date with technology by adding more modules to your ICDL Profile."
+	}
+
+	/*
+	   * if given step is the selected step, deselect it
+	   * else, select the given step
+	*/
+	$scope.toggleStep = function(step) {
+		if ($scope.isStepShown(step)) {
+		  $scope.shownStep = null;
+		} else {
+		  $scope.shownStep = step;
+		}
+	};
+	$scope.isStepShown = function(step) {
+		return $scope.shownStep === step;
+	};
+
+})
+
+.controller('accreditedICDLCentersCtrl', function($scope) {
+
+})
+
+.controller('becomeACenterCtrl', function($scope) {
+
+})
+
+.controller('fAQSCtrl', function($scope) {
+
+	  $scope.faqs = [];
+	  $scope.faqs[0] = {
+	    question: "Which is the best ICDL Module?",
+	    answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti dolore architecto soluta, maiores, iure obcaecati hic ullam, eum enim, minus. Maiores molestias ipsum, temporibus porro cum, aliquid iure rerum!"
+	  }
+
+	  $scope.faqs[1] = {
+	    question: "How do I register?",
+	    answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti dolore architecto soluta, maiores, iure obcaecati hic ullam, eum enim, minus. Maiores molestias ipsum, temporibus porro cum, aliquid iure rerum!"
+	  }
+
+	  $scope.faqs[2] = {
+	    question: "What do I gain from ICDL?",
+	    answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti dolore architecto soluta, maiores, iure obcaecati hic ullam, eum enim, minus. Maiores molestias ipsum, temporibus porro cum, aliquid iure rerum!"
+	  }
+
+	  /*
+	   * if given faq is the selected faq, deselect it
+	   * else, select the given faq
+	   */
+	  $scope.toggleFaq = function(faq) {
+	    if ($scope.isFaqShown(faq)) {
+	      $scope.shownFaq = null;
+	    } else {
+	      $scope.shownFaq = faq;
+	    }
+	  };
+	  $scope.isFaqShown = function(faq) {
+	    return $scope.shownFaq === faq;
+	  };
+
+// code for the ion-bar color
+	  $scope.$on('$ionicView.beforeEnter', function() {
+    $rootScope.viewColor = 'green';
+});
+//////////////////////////////////////////////////////
+
+})
+
+.controller('creditsCtrl', function($scope) {
+
+})
+
+.controller('introductoryModulesCtrl', function($scope) {
+
+	$scope.modules = [];
+
+	$scope.modules[0] = {
+
+	    title: "Digital Citizen",
+	    img: "img/dc-1.png",
+	    body: "Digital Citizen is specially developed to cater for those with no experience whatsoever of computers and the Internet. Digital Citizen helps to remove the fear of using a computer for complete novices by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet.",
+	    syllabus: "http://icdlafrica.org/media/icdl_africa_digital_citizen_info_sheet_v1.0.pdf",
+	}
+
+	$scope.modules[1] = {
+
+	    title: "Digital Citizen Plus",
+	    img: "img/dc-2.png",
+	    body: "Digital Citizen Plus is specially developed as an introduction to the ICDL Base Modules, to cater for candidates who have very little experience of computers and the Internet. Digital Citizen Plus helps to remove the fear of using a computer for beginners by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet.",
+	    syllabus: "/syllabi/dc-plus.pdf",
+	}
+
+	$scope.open = function (url) {
+		$window.open(url, '_system');
+	}
+
+})
+
+.controller('baseModulesCtrl', function($scope) {
+
+	$scope.modules = [];
+
+	$scope.modules[0] = {
+
+	    title: "Computer Essentials",
+	    img: "img/pc.jpg",
+	    body: "This module will teach you the essential concepts and skills relating to the use of devices, file creation and management, networks and data security.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLComputerEssentials1.pdf",
+	}
+
+	$scope.modules[1] = {
+
+	    title: "Online Essentials",
+	    img: "img/online-essentials.jpg",
+	    body: "This module will teach you the essential concepts and skills relating to web browsing, effective information search, online communication and e-mail.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLOnlineEssentials1.pdf",
+	}
+
+	$scope.modules[2] = {
+
+	    title: "Word Processing",
+	    img: "img/word-processing.jpg",
+	    body: "This module teaches you to use a word processing application to accomplish everyday tasks associated with creating, formatting and finishing small-sized word processing documents, such as letters and other everyday documents.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLWordProcessing1.pdf",
+	}
+
+	$scope.modules[3] = {
+
+	    title: "Spreadsheets",
+	    img: "img/spreadsheets.jpg",
+	    body: "This module teaches you to understand the concept of spreadsheets and to use a spreadsheet application. It will enable you to perform tasks associated with developing, formatting, modifying and using a spreadsheet, to use standard formulas and functions, and to competently create and format graphs or charts.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLSpreadsheets1.pdf",
+	}
+
+})
+
+.controller('standardModulesCtrl', function($scope) {
+	$scope.modules = [];
+
+	$scope.modules[0] = {
+
+	    title: "Presentation",
+	    img: "img/presentation.jpg",
+	    body: "This module will enable you to demonstrate competence in using presentation tools on a computer. It will teach you to perform tasks such as creating, formatting, modifying and preparing presentations using different slide layouts for display and printed distribution.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLPresentation1.pdf",
+	}
+
+	$scope.modules[1] = {
+
+	    title: "Using Databases",
+	    img: "img/using-databases.jpg",
+	    body: "This module develops work-based skills. It will enable you to understand the main concepts of databases and demonstrate the ability to use a database application. This includes creating and modifying tables, queries, forms and reports, and preparing outputs ready for distribution, as well as learning to relate tables and to retrieve and manipulate information from a database by using query and sort tools.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLUsingDatabases1.pdf",
+	}
+
+	$scope.modules[2] = {
+
+	    title: "Online Collaboration",
+	    img: "img/online-collaboration.jpg",
+	    body: "This module teaches you how to effectively collaborate on online/remote project, either for work or study. It sets out concepts and skills relating to the setup and use of online collaborative tools, such as storage, productivity applications, calendars, social media, web meetings, learning environments, and mobile technology.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLOnlineCollaboration1.pdf",
+	}
+
+	$scope.modules[3] = {
+
+	    title: "IT Security",
+	    img: "img/it-security.jpg",
+	    body: "This IT Security module has been developed to enable you, the computer user (rather than IT professionals), to identify and protect yourself and their organisation from common security challenges when using ICT. It will also teach you how to operate safely when online.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLITSecurity_V21.pdf",
+	}
+
+	$scope.modules[4] = {
+
+	    title: "Project Planning",
+	    img: "img/project-planning.jpg",
+	    body: "Project Planning has been developed to enable you, the computer user (rather than IT professionals) to use project management software to prepare project plans and monitor projects including planning and managing time, costs, tasks, and resources. These skills can be applied to both work and home-based projects.",
+	    syllabus: "http://icdlafrica.org/media/ECDL_ICDLProjectPlanning1.pdf",
+	}
+
+})
+
+.controller('advancedModulesCtrl', function($scope) {
+  $scope.modules = [];
+
+  $scope.modules[0] = {
+
+      title: "Advanced Word Processing",
+      img: "img/adv-word-processing.jpg",
+      body: "This module will provide you with the ability to use the advanced features of word processing applications to enhance your work, improve productivity and save time. By successfully completing this module you will acquire a skill set over and above the routine features of the software.",
+      syllabus: "http://icdlafrica.org/media/ecdl_icdladvancedwordprocessingsyllabusversion2.01_1.pdf",
+  }
+
+  $scope.modules[1] = {
+
+      title: "Advanced Spreadsheets",
+      img: "img/adv-spreadsheets.jpg",
+      body: "Successful completion of this module will enable you to master the more advanced functions of spreadsheet applications, enabling you to produce more sophisticated  reports, and to perform complex mathematical and statistical calculations. These skills will save you considerable amounts of time and will improve your productivity.",
+      syllabus: "http://icdlafrica.org/media/ecdl_icdladvancedspreadsheetssyllabusversion2.01_1.pdf",
+  }
+
+  $scope.modules[2] = {
+
+      title: "Advanced Databases",
+      img: "img/adv-db.jpg",
+      body: "The skills gained through this module will enable you to maximise advanced database functions, in order to manage and analyse high volumes of data. This will enable you to efficiently produce the quantity and quality of information that business today demands.",
+      syllabus: "http://icdlafrica.org/media/ecdl_icdladvanceddatabasesyllabusversion2.01_1.pdf",
+  }
+
+  $scope.modules[3] = {
+
+      title: "Advanced presentation",
+      img: "img/adv-presentation.jpg",
+      body: "This module covers advanced presentation features that will allow you to use the presentation application to its full potential, and to plan and design more effective presentations that have greater impact and that will better engage and involve an audience.",
+      syllabus: "http://icdlafrica.org/media/ecdl_icdladvancedpresentationsyllabusversion2.01_1.pdf",
+  }
+
+})

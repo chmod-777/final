@@ -1,0 +1,22 @@
+<ion-view title="Standard Modules" id="page12" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="list card " id="standardModules-card23" ng-repeat="module in modules">
+            <ion-item class="calm  " id="standardModules-list-item23">{{ module.title }}</ion-item>
+            <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+                <img ng-src="{{ module.img }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body " id="standardModules-list-item-container9">
+                <p id="standardModules-markdown2" style="margin-top:0px;color:#000000;" class=" ">
+                    {{ module.body }}
+                </p>
+
+                <br>
+
+                <a ng-click="open_link('{{ module.syllabus }}')" target="_system" class=" button button-calm  button-block ">Download Syllabus</a>
+            </div>
+            <ion-item class="calm  itm-divider" id="standardModules-list-item24">
+                
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

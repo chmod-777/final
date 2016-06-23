@@ -1,0 +1,26 @@
+<ion-view title="FAQ's" id="page8" class=" ">
+    <ion-content padding="true" class="has-header">
+    <!-- Header img -->
+    <div class="" style="padding-bottom: 5px;">
+        <img src="img/faq.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+    </div>
+    <!-- End Header img -->
+		<ion-list>
+        	<div ng-repeat="faq in faqs">
+          		<ion-item class="item-stable item-calm item-text-wrap"
+                    ng-click="toggleFaq(faq)"
+                    ng-class="{active: isFaqShown(faq)}">
+              			<i class="icon" ng-class="isFaqShown(faq) ? 'ion-minus' : 'ion-plus'"></i>
+            			&nbsp;
+            			{{faq.question}}
+          		</ion-item>
+          		<ion-item class="item-accordion item-text-wrap"
+                    ng-show="isFaqShown(faq)">
+            			{{faq.answer}}
+          		</ion-item>
+        	</div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+      	</ion-list>
+    </ion-content>
+</ion-view>

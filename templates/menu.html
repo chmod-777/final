@@ -1,0 +1,31 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Menu</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header">
+            <div class="">
+                <img src="img/9fAo08bVRBihTtyAitke_logo-africa.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <ion-list id="menu-list3" class=" ">
+                <ion-item class="calm  " id="menu-list-item1" ui-sref="menu.latestICDLNews" menu-close="">Latest ICDL News</ion-item>
+                <ion-item class="calm  " id="menu-list-item2" ui-sref="menu.iCDLModules" menu-close="">ICDL Modules</ion-item>
+                <ion-item class="calm  " id="menu-list-item3" ui-sref="menu.trainingExams" menu-close="">ICDL Training &amp; Exams</ion-item>
+                <ion-item class="calm  " id="menu-list-item4" href="#" onclick="window.open('http://www.icdlprofilezw.org/', '_system', 'location=yes'); return false;">ICDL Online Profile</ion-item>
+                <ion-item class="calm  " id="menu-list-item5" href="#" onclick="window.open('http://icdlafrica.org/find-a-test-centre', '_system', 'location=yes'); return false;" >Accredited ICDL Centers</ion-item> <!-- ui-sref="menu.accreditedICDLCenters" menu-close="" -->
+                <ion-item class="calm  " id="menu-list-item6" ui-sref="menu.becomeACenter" menu-close="">Become an ICDL Center</ion-item>
+                <ion-item class="calm  " id="menu-list-item8" ui-sref="menu.fAQS" menu-close="">FAQ's</ion-item>
+                <ion-item class="calm  " id="menu-list-item9" ui-sref="menu.credits" menu-close="">Credits</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

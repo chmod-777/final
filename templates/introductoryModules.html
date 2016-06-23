@@ -1,0 +1,21 @@
+<ion-view title="Introductory Modules" id="page10" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="list card " id="introductoryModules-card21" ng-repeat="module in modules">
+            <ion-item class="calm  item-divider" id="introductoryModules-list-item19">{{ module.title }}</ion-item>
+            <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+                <img ng-src="{{ module.img }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body " id="introductoryModules-list-item-container7">
+                <p id="introductoryModules-markdown4" style="margin-top:0px;color:#000000;" class=" ">
+                    {{ module.body }}
+                </p>
+
+                <br>
+                <a onclick="window.open({{ module.syllabus }}, '_system', 'location=no'); return false;" target="_blank" class=" button button-calm  button-block ">Download Syllabus</a>
+            </div>
+            <ion-item class="calm  item-divider" id="introductoryModules-list-item20">
+
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

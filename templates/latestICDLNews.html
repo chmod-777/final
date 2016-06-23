@@ -1,0 +1,36 @@
+<ion-view title="Latest ICDL News" id="page1" class=" ">
+    <ion-content padding="true" class="has-header">
+        <!-- Header img -->
+        <div class="">
+            <img src="img/news.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <!-- End Header img -->
+
+        <!-- <button ng-click="insert('Title-2', 'http://www.img.com/', '1 January 1999', 'This is the lorem ipsum of the second entry')">Insert</button>
+
+        <button ng-click="select()">Select</button> -->
+
+        <div class="list card " ng-repeat="article in articles | limitTo:pageSize"> <!-- id="latestICDLNews-card26" -->
+            <ion-item class="item-divider calm  " id="latestICDLNews-list-item28">
+                <h2calm class="item-text-wrap"> {{ article.title }}</h2calm>
+            </ion-item>
+            <div class=" item item-image">
+                <img ng-src="{{ article.img }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body " id="latestICDLNews-list-item-container6">
+                <p id="latestICDLNews-markdown1" style="margin-top:0px;color:#000000;" class=" ">Published:
+                    <strong>{{ article.date }}</strong>
+                </p>
+                <p id="latestICDLNews-markdown5" style="color:#000000;" class=" ">
+                    <div ng-bind-html="article.body"></div>
+                </p>
+            </div>
+            <ion-item class="item-divider calm  ">
+                <!-- <strong>Source:</strong> {{ article.source }} -->
+            </ion-item>
+        </div>
+
+        <!-- Show more button - only shows when there are still more articles -->
+        <button ng-if="pageSize < articles.length" ng-click="loadNextPage()" class="button button-calm button-block">Show More</button>
+    </ion-content>
+</ion-view>
